@@ -28,7 +28,11 @@ namespace WinFormsApp1
 			{
 				while (rd.Read())
 				{
-					Console.WriteLine(rd[1]);
+					for (int i = 0; i < rd.FieldCount; i++)
+					{
+						Console.WriteLine(rd[i]);
+					}
+					Console.WriteLine("------------");
 				}
 			}
 
