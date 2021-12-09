@@ -1,0 +1,14 @@
+D:\IT\Projects\DataBaseLabs\src\Lab7\WinFormsApp1\bin\Debug\netcoreapp3.1\WinFormsApp1.exe
+D:\IT\Projects\DataBaseLabs\src\Lab7\WinFormsApp1\bin\Debug\netcoreapp3.1\WinFormsApp1.deps.json
+D:\IT\Projects\DataBaseLabs\src\Lab7\WinFormsApp1\bin\Debug\netcoreapp3.1\WinFormsApp1.runtimeconfig.json
+D:\IT\Projects\DataBaseLabs\src\Lab7\WinFormsApp1\bin\Debug\netcoreapp3.1\WinFormsApp1.runtimeconfig.dev.json
+D:\IT\Projects\DataBaseLabs\src\Lab7\WinFormsApp1\bin\Debug\netcoreapp3.1\WinFormsApp1.dll
+D:\IT\Projects\DataBaseLabs\src\Lab7\WinFormsApp1\bin\Debug\netcoreapp3.1\WinFormsApp1.pdb
+D:\IT\Projects\DataBaseLabs\src\Lab7\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.csproj.AssemblyReference.cache
+D:\IT\Projects\DataBaseLabs\src\Lab7\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.GeneratedMSBuildEditorConfig.editorconfig
+D:\IT\Projects\DataBaseLabs\src\Lab7\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.AssemblyInfoInputs.cache
+D:\IT\Projects\DataBaseLabs\src\Lab7\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.AssemblyInfo.cs
+D:\IT\Projects\DataBaseLabs\src\Lab7\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.csproj.CoreCompileInputs.cache
+D:\IT\Projects\DataBaseLabs\src\Lab7\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.dll
+D:\IT\Projects\DataBaseLabs\src\Lab7\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.pdb
+D:\IT\Projects\DataBaseLabs\src\Lab7\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.genruntimeconfig.cache
