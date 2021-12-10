@@ -2,7 +2,7 @@
 
 namespace WinFormsApp1.Models
 {
-	class Apointment
+	class Appointment
 	{
 		public DateTime Datetime { get; set; }
 

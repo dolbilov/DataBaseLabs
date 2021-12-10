@@ -1,6 +1,6 @@
 ﻿namespace WinFormsApp1.Models
 {
-	enum Specialization
+	public enum Specialization
 	{
 		GeneralDoctor,
 		Surgeon,
