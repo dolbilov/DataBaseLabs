@@ -19,7 +19,7 @@ namespace WinFormsApp1
 			var cmd = new OleDbCommand
 			{
 				Connection = connection,
-				CommandText = "SELECT * FROM _Врачи"
+				CommandText = "SELECT * FROM _Приемы"
 			};
 
 			OleDbDataReader rd = cmd.ExecuteReader();

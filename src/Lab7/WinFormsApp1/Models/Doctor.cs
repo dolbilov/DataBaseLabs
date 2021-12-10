@@ -1,4 +1,7 @@
-﻿namespace WinFormsApp1.Models
+﻿using System;
+using System.Collections.Generic;
+
+namespace WinFormsApp1.Models
 {
 	class Doctor
 	{
@@ -19,5 +22,28 @@
 
 		// Специализация
 		public Specialization DoctorSpecialization { get; set; }
+
+		public static List<Doctor> instances = new();
+
+		public Doctor(List<string> data)
+		{
+			
+			if (data == null) throw new ArgumentNullException(nameof(data));
+
+			if (data.Count != 6) throw new ArgumentException("Length of array doesn't match the required");
+
+			DoctorPersonalNum = Convert.ToInt32(data[0]);
+
+			HospitalNumber = Convert.ToInt32(data[1]);
+
+			LastName = data[2];
+
+			FirstName = data[3];
+
+			Patronymic = data[4];
+
+			//TODO: create Specialization parser
+
+		}
 	}
 }
