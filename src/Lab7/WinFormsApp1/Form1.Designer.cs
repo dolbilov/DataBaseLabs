@@ -68,20 +68,20 @@ namespace WinFormsApp1
 			// addToolStripMenuItem
 			// 
 			this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-			this.addToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.addToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
 			this.addToolStripMenuItem.Text = "Добавить";
 			this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
 			// 
 			// updateToolStripMenuItem
 			// 
 			this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-			this.updateToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.updateToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
 			this.updateToolStripMenuItem.Text = "Обновить";
 			// 
 			// deleteToolStripMenuItem
 			// 
 			this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-			this.deleteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.deleteToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
 			this.deleteToolStripMenuItem.Text = "Удалить";
 			this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
 			// 
@@ -141,7 +141,7 @@ namespace WinFormsApp1
 			this.Controls.Add(this.menuStrip1);
 			this.MainMenuStrip = this.menuStrip1;
 			this.Name = "Form1";
-			this.Text = "Form1";
+			this.Text = "DBBrowser";
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.mainDataGrid)).EndInit();

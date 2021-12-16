@@ -46,38 +46,7 @@ namespace WinFormsApp1
 
 		private void addToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			if (mainDataGrid.SelectedRows.Count == 0)
-			{
-				MessageBox.Show("Сначала выберите строку.", "Внимание!");
-				return;
-			}
-
-			if (mainDataGrid.SelectedRows.Count != 1)
-			{
-				MessageBox.Show("Выберите только 1 строку.", "Внимание!");
-				return;
-			}
-
-			// index of selected row
-			var index = mainDataGrid.SelectedRows[0].Index;
-
-			// check if all cells are filled
-			if (mainDataGrid.Rows[index].Cells[0].Value == null ||
-			    mainDataGrid.Rows[index].Cells[1].Value == null ||
-			    mainDataGrid.Rows[index].Cells[2].Value == null ||
-			    mainDataGrid.Rows[index].Cells[3].Value == null ||
-			    mainDataGrid.Rows[index].Cells[4].Value == null)
-			{
-				MessageBox.Show(@"Не все данные введены!", "Внимание!");
-			}
-
-			var columnsCount = mainDataGrid.Rows[index].Cells.Count;
-			List<string> data = new();
-			for (var i = 0; i < columnsCount; i++)
-			{
-				data.Add(mainDataGrid.Rows[index].Cells[i].Value.ToString());
-			}
-
+			//TODO: create new form
 		}
 
 		private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

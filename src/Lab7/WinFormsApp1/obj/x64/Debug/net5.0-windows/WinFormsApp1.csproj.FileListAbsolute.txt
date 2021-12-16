@@ -23,7 +23,6 @@ D:\IT\Projects\DataBaseLabs\src\Lab7\WinFormsApp1\bin\x64\Debug\net5.0-windows\r
 D:\IT\Projects\DataBaseLabs\src\Lab7\WinFormsApp1\bin\x64\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\IT\Projects\DataBaseLabs\src\Lab7\WinFormsApp1\bin\x64\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\System.Windows.Extensions.dll
 D:\IT\Projects\DataBaseLabs\src\Lab7\WinFormsApp1\obj\x64\Debug\net5.0-windows\WinFormsApp1.csproj.AssemblyReference.cache
-D:\IT\Projects\DataBaseLabs\src\Lab7\WinFormsApp1\obj\x64\Debug\net5.0-windows\WinFormsApp1.Form1.resources
 D:\IT\Projects\DataBaseLabs\src\Lab7\WinFormsApp1\obj\x64\Debug\net5.0-windows\WinFormsApp1.csproj.GenerateResource.cache
 D:\IT\Projects\DataBaseLabs\src\Lab7\WinFormsApp1\obj\x64\Debug\net5.0-windows\WinFormsApp1.GeneratedMSBuildEditorConfig.editorconfig
 D:\IT\Projects\DataBaseLabs\src\Lab7\WinFormsApp1\obj\x64\Debug\net5.0-windows\WinFormsApp1.AssemblyInfoInputs.cache
@@ -34,3 +33,4 @@ D:\IT\Projects\DataBaseLabs\src\Lab7\WinFormsApp1\obj\x64\Debug\net5.0-windows\W
 D:\IT\Projects\DataBaseLabs\src\Lab7\WinFormsApp1\obj\x64\Debug\net5.0-windows\ref\WinFormsApp1.dll
 D:\IT\Projects\DataBaseLabs\src\Lab7\WinFormsApp1\obj\x64\Debug\net5.0-windows\WinFormsApp1.pdb
 D:\IT\Projects\DataBaseLabs\src\Lab7\WinFormsApp1\obj\x64\Debug\net5.0-windows\WinFormsApp1.genruntimeconfig.cache
+D:\IT\Projects\DataBaseLabs\src\Lab7\WinFormsApp1\obj\x64\Debug\net5.0-windows\WinFormsApp1.Form1.resources
