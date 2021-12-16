@@ -1,5 +1,6 @@
 using System;
 using System.Windows.Forms;
+using WinFormsApp1.Utils;
 
 namespace WinFormsApp1
 {
@@ -11,12 +12,10 @@ namespace WinFormsApp1
 		[STAThread]
 		static void Main()
 		{
-			DBManager.Initialize();
 			Application.SetHighDpiMode(HighDpiMode.SystemAware);
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 			Application.Run(new Form1());
-			
 		}
 	}
 }

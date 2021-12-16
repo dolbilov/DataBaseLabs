@@ -13,5 +13,11 @@ namespace WinFormsApp1.Utils
 			[TableNames.Patients] = "_Пациенты",
 			[TableNames.Procedures] = "_Процедуры"
 		};
+
+		public static string ProgramVersion { get; } = "v0.1";
+		public static string ProgramAuthor{ get; } = "Kirill Dolbilov";
+		public static string AdditionalInfo{ get; } = "MIET 2021";
+
+		
 	}
 }

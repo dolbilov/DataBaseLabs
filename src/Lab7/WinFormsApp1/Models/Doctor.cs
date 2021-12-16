@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using WinFormsApp1.Utils;
 
 namespace WinFormsApp1.Models
 {
@@ -42,8 +43,9 @@ namespace WinFormsApp1.Models
 
 			Patronymic = data[4];
 
-			//TODO: create Specialization parser
+			DoctorSpecialization = DoctorSpecializationParser.StringToEnum(data[5]);
 
+			instances.Add(this);
 		}
 	}
 }
