@@ -47,7 +47,6 @@ namespace WinFormsApp1.Forms
 			// 
 			// textBox1
 			// 
-			this.textBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
 			this.textBox1.Location = new System.Drawing.Point(218, 46);
 			this.textBox1.Name = "textBox1";
 			this.textBox1.Size = new System.Drawing.Size(227, 23);
@@ -84,7 +83,6 @@ namespace WinFormsApp1.Forms
 			// 
 			// textBox2
 			// 
-			this.textBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
 			this.textBox2.Location = new System.Drawing.Point(218, 97);
 			this.textBox2.Name = "textBox2";
 			this.textBox2.Size = new System.Drawing.Size(227, 23);
@@ -102,7 +100,6 @@ namespace WinFormsApp1.Forms
 			// 
 			// textBox3
 			// 
-			this.textBox3.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
 			this.textBox3.Location = new System.Drawing.Point(218, 145);
 			this.textBox3.Name = "textBox3";
 			this.textBox3.Size = new System.Drawing.Size(227, 23);
@@ -119,7 +116,6 @@ namespace WinFormsApp1.Forms
 			// 
 			// textBox4
 			// 
-			this.textBox4.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
 			this.textBox4.Location = new System.Drawing.Point(218, 198);
 			this.textBox4.Name = "textBox4";
 			this.textBox4.Size = new System.Drawing.Size(227, 23);
@@ -133,16 +129,13 @@ namespace WinFormsApp1.Forms
 			this.label5.Size = new System.Drawing.Size(58, 15);
 			this.label5.TabIndex = 11;
 			this.label5.Text = "Отчество";
-			this.label5.Click += new System.EventHandler(this.label5_Click);
 			// 
 			// textBox5
 			// 
-			this.textBox5.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
 			this.textBox5.Location = new System.Drawing.Point(218, 252);
 			this.textBox5.Name = "textBox5";
 			this.textBox5.Size = new System.Drawing.Size(227, 23);
 			this.textBox5.TabIndex = 10;
-			this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
 			// 
 			// label6
 			// 
@@ -165,7 +158,6 @@ namespace WinFormsApp1.Forms
 			// 
 			// textBox6
 			// 
-			this.textBox6.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
 			this.textBox6.Location = new System.Drawing.Point(218, 304);
 			this.textBox6.Name = "textBox6";
 			this.textBox6.Size = new System.Drawing.Size(227, 23);

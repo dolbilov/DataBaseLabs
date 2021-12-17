@@ -165,7 +165,7 @@ namespace WinFormsApp1
 		private ToolStripMenuItem deleteToolStripMenuItem;
 		private ToolStripMenuItem aboutProgramToolStripMenuItem;
 		private ToolStripMenuItem exitToolStripMenuItem;
-		private ComboBox comboBox1;
+		public ComboBox comboBox1;
 		public DataGridView mainDataGrid;
 	}
 }

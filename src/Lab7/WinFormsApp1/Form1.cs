@@ -24,7 +24,7 @@ namespace WinFormsApp1
 
 		public static bool IsChoose = false;
 
-		public static TableOpenMode tableOpenMode = TableOpenMode.Add;
+		public static TableOpenMode CurrentTableOpenMode = TableOpenMode.Add;
 
 		public Form1()
 		{
@@ -49,7 +49,8 @@ namespace WinFormsApp1
 
 		private void addToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			AddOrEditTable(TableOpenMode.Add);
+			CurrentTableOpenMode = TableOpenMode.Add;
+			AddOrEditTable();
 		}
 
 		private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -192,22 +193,33 @@ namespace WinFormsApp1
 
 		private void updateToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			AddOrEditTable(TableOpenMode.Edit);
+			CurrentTableOpenMode = TableOpenMode.Edit;
+			AddOrEditTable();
 		}
 
-		private void AddOrEditTable(TableOpenMode tom)
+		private void AddOrEditTable()
 		{
+			var cells = mainDataGrid.SelectedRows[0].Cells;
+
 			switch (comboBox1.SelectedIndex)
 			{
 				// Врачи
 				case 0:
-					var form = new DoctorsForm();
-					if (tom == TableOpenMode.Edit)
+					var form = new DoctorsForm(cells);
+					if (CurrentTableOpenMode == TableOpenMode.Edit)
 					{
 						form.mainLabel.Text = "Изменить значения";
 						form.button1.Text = "Сохранить изменения";
-						//TODO: insert values into textboxes
+
+						//insert values into textboxes
+						form.textBox1.Text = cells[0].Value.ToString();
+						form.textBox2.Text = cells[1].Value.ToString();
+						form.textBox3.Text = cells[2].Value.ToString();
+						form.textBox4.Text = cells[3].Value.ToString();
+						form.textBox5.Text = cells[4].Value.ToString();
+						form.textBox6.Text = cells[5].Value.ToString();
 					}
+					
 					form.ShowDialog(this);
 					break;
 
