@@ -8,7 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinFormsApp1.Forms;
 using WinFormsApp1.Utils;
+using WinFormsApp1.Utils.Enums;
 
 namespace WinFormsApp1
 {
@@ -21,6 +23,8 @@ namespace WinFormsApp1
 		public static OleDbConnection connection = new(provider);
 
 		public static bool IsChoose = false;
+
+		public static TableOpenMode tableOpenMode = TableOpenMode.Add;
 
 		public Form1()
 		{
@@ -45,7 +49,7 @@ namespace WinFormsApp1
 
 		private void addToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			//TODO: create new form
+			AddOrEditTable(TableOpenMode.Add);
 		}
 
 		private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -165,7 +169,7 @@ namespace WinFormsApp1
 				var cmd = new OleDbCommand(query, DBManager.connection);
 				cmd.ExecuteNonQuery();
 				DBManager.connection.Close();
-				mainDataGrid.DataSource = DBManager.GetDataSet(comboBox1.SelectedIndex).Tables[0];
+				UpdateTable();
 
 			}
 			catch (Exception exception)
@@ -177,6 +181,58 @@ namespace WinFormsApp1
 			{
 				DBManager.connection.Close();
 			}
+		}
+
+		public void UpdateTable()
+		{
+			var dataSet = DBManager.GetDataSet(comboBox1.SelectedIndex);
+
+			mainDataGrid.DataSource = dataSet.Tables[0];
+		}
+
+		private void updateToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			AddOrEditTable(TableOpenMode.Edit);
+		}
+
+		private void AddOrEditTable(TableOpenMode tom)
+		{
+			switch (comboBox1.SelectedIndex)
+			{
+				// Врачи
+				case 0:
+					var form = new DoctorsForm();
+					if (tom == TableOpenMode.Edit)
+					{
+						form.mainLabel.Text = "Изменить значения";
+						form.button1.Text = "Сохранить изменения";
+						//TODO: insert values into textboxes
+					}
+					form.ShowDialog(this);
+					break;
+
+				// Диагнозы
+				case 1:
+					break;
+
+				// Лечебные учреждения
+				case 2:
+					break;
+
+				// Пациенты
+				case 3:
+					break;
+
+				// Приемы
+				case 4:
+					break;
+
+				// Процедуры
+				case 5:
+					break;
+			}
+
+			UpdateTable();
 		}
 	}
 }

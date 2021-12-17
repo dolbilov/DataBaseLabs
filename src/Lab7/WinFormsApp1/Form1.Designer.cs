@@ -1,4 +1,9 @@
 ﻿
+using System;
+using System.ComponentModel;
+using System.Drawing;
+using System.Windows.Forms;
+
 namespace WinFormsApp1
 {
 	partial class Form1
@@ -6,7 +11,7 @@ namespace WinFormsApp1
 		/// <summary>
 		///  Required designer variable.
 		/// </summary>
-		private System.ComponentModel.IContainer components = null;
+		private IContainer components = null;
 
 		/// <summary>
 		///  Clean up any resources being used.
@@ -77,6 +82,7 @@ namespace WinFormsApp1
 			this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
 			this.updateToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.updateToolStripMenuItem.Text = "Изменить";
+			this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
 			// 
 			// deleteToolStripMenuItem
 			// 
@@ -152,14 +158,14 @@ namespace WinFormsApp1
 
 		#endregion
 
-		private System.Windows.Forms.MenuStrip menuStrip1;
-		private System.Windows.Forms.ToolStripMenuItem actionsToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem aboutProgramToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-		private System.Windows.Forms.ComboBox comboBox1;
-		public System.Windows.Forms.DataGridView mainDataGrid;
+		private MenuStrip menuStrip1;
+		private ToolStripMenuItem actionsToolStripMenuItem;
+		private ToolStripMenuItem addToolStripMenuItem;
+		private ToolStripMenuItem updateToolStripMenuItem;
+		private ToolStripMenuItem deleteToolStripMenuItem;
+		private ToolStripMenuItem aboutProgramToolStripMenuItem;
+		private ToolStripMenuItem exitToolStripMenuItem;
+		private ComboBox comboBox1;
+		public DataGridView mainDataGrid;
 	}
 }
