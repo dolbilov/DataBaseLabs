@@ -1,10 +1,7 @@
-﻿
-using System;
-using System.ComponentModel;
-using System.Drawing;
+﻿using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace WinFormsApp1
+namespace WinFormsApp1.Forms
 {
 	partial class Form1
 	{
@@ -34,6 +31,7 @@ namespace WinFormsApp1
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
 			this.actionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,7 +53,7 @@ namespace WinFormsApp1
             this.exitToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
-			this.menuStrip1.Size = new System.Drawing.Size(1071, 24);
+			this.menuStrip1.Size = new System.Drawing.Size(829, 24);
 			this.menuStrip1.TabIndex = 0;
 			this.menuStrip1.Text = "menuStrip1";
 			// 
@@ -73,21 +71,21 @@ namespace WinFormsApp1
 			// addToolStripMenuItem
 			// 
 			this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-			this.addToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.addToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
 			this.addToolStripMenuItem.Text = "Добавить";
 			this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
 			// 
 			// updateToolStripMenuItem
 			// 
 			this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-			this.updateToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.updateToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
 			this.updateToolStripMenuItem.Text = "Изменить";
 			this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
 			// 
 			// deleteToolStripMenuItem
 			// 
 			this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-			this.deleteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.deleteToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
 			this.deleteToolStripMenuItem.Text = "Удалить";
 			this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
 			// 
@@ -110,14 +108,24 @@ namespace WinFormsApp1
 			this.mainDataGrid.AllowUserToAddRows = false;
 			this.mainDataGrid.AllowUserToDeleteRows = false;
 			this.mainDataGrid.AllowUserToResizeColumns = false;
+			this.mainDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+			dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.mainDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
 			this.mainDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.mainDataGrid.Location = new System.Drawing.Point(22, 124);
+			this.mainDataGrid.Location = new System.Drawing.Point(22, 162);
 			this.mainDataGrid.MultiSelect = false;
 			this.mainDataGrid.Name = "mainDataGrid";
 			this.mainDataGrid.ReadOnly = true;
+			this.mainDataGrid.RowHeadersWidth = 50;
 			this.mainDataGrid.RowTemplate.Height = 25;
 			this.mainDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			this.mainDataGrid.Size = new System.Drawing.Size(789, 303);
+			this.mainDataGrid.Size = new System.Drawing.Size(789, 376);
 			this.mainDataGrid.TabIndex = 1;
 			// 
 			// comboBox1
@@ -141,7 +149,7 @@ namespace WinFormsApp1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1071, 550);
+			this.ClientSize = new System.Drawing.Size(829, 550);
 			this.Controls.Add(this.comboBox1);
 			this.Controls.Add(this.mainDataGrid);
 			this.Controls.Add(this.menuStrip1);

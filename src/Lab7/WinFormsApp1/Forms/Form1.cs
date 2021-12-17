@@ -1,18 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.OleDb;
-using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using WinFormsApp1.Forms;
 using WinFormsApp1.Utils;
 using WinFormsApp1.Utils.Enums;
 
-namespace WinFormsApp1
+namespace WinFormsApp1.Forms
 {
 	public partial class Form1 : Form
 	{
@@ -22,7 +15,7 @@ namespace WinFormsApp1
 
 		public static OleDbConnection connection = new(provider);
 
-		public static bool IsChoose = false;
+		private static bool _isChoose = false;
 
 		public static TableOpenMode CurrentTableOpenMode = TableOpenMode.Add;
 
@@ -55,10 +48,10 @@ namespace WinFormsApp1
 
 		private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			if (!IsChoose)
+			if (!_isChoose)
 			{
 				menuStrip1.Items.Find("actionsToolStripMenuItem", false)[0].Enabled = true;
-				IsChoose = true;
+				_isChoose = true;
 			}
 
 			var comboBox = sender as ComboBox;
@@ -184,7 +177,7 @@ namespace WinFormsApp1
 			}
 		}
 
-		public void UpdateTable()
+		private void UpdateTable()
 		{
 			var dataSet = DBManager.GetDataSet(comboBox1.SelectedIndex);
 

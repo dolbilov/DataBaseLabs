@@ -1,6 +1,6 @@
 using System;
 using System.Windows.Forms;
-using WinFormsApp1.Utils;
+using WinFormsApp1.Forms;
 
 namespace WinFormsApp1
 {
@@ -10,7 +10,7 @@ namespace WinFormsApp1
 		///  The main entry point for the application.
 		/// </summary>
 		[STAThread]
-		static void Main()
+		private static void Main()
 		{
 			Application.SetHighDpiMode(HighDpiMode.SystemAware);
 			Application.EnableVisualStyles();
