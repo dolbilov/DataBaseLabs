@@ -34,3 +34,4 @@ D:\IT\Projects\DataBaseLabs\src\Lab7\WinFormsApp1\obj\x64\Debug\net5.0-windows\r
 D:\IT\Projects\DataBaseLabs\src\Lab7\WinFormsApp1\obj\x64\Debug\net5.0-windows\WinFormsApp1.pdb
 D:\IT\Projects\DataBaseLabs\src\Lab7\WinFormsApp1\obj\x64\Debug\net5.0-windows\WinFormsApp1.genruntimeconfig.cache
 D:\IT\Projects\DataBaseLabs\src\Lab7\WinFormsApp1\obj\x64\Debug\net5.0-windows\WinFormsApp1.Form1.resources
+D:\IT\Projects\DataBaseLabs\src\Lab7\WinFormsApp1\obj\x64\Debug\net5.0-windows\WinFormsApp1.Forms.DoctorsForm.resources

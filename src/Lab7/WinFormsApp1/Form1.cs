@@ -14,13 +14,13 @@ namespace WinFormsApp1
 {
 	public partial class Form1 : Form
 	{
-		public const string provider =
+		private const string provider =
 			@"Provider=Microsoft.ACE.OLEDB.12.0;" +
 			@"Data Source=""..\..\..\..\src\bd.accdb""";
 
 		public static OleDbConnection connection = new(provider);
 
-		private static bool isChoose = false;
+		public static bool IsChoose = false;
 
 		public Form1()
 		{
@@ -43,7 +43,6 @@ namespace WinFormsApp1
 			MessageBox.Show(sb.ToString(), "DataBaseBrowser");
 		}
 
-
 		private void addToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			//TODO: create new form
@@ -51,12 +50,12 @@ namespace WinFormsApp1
 
 		private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			if (!isChoose)
+			if (!IsChoose)
 			{
 				menuStrip1.Items.Find("actionsToolStripMenuItem", false)[0].Enabled = true;
-				isChoose = true;
+				IsChoose = true;
 			}
-			
+
 			var comboBox = sender as ComboBox;
 
 			if (comboBox == null)
@@ -65,17 +64,22 @@ namespace WinFormsApp1
 			var index = comboBox.SelectedIndex;
 
 			var dataSet = DBManager.GetDataSet(index);
-			
+
 			mainDataGrid.DataSource = dataSet.Tables[0];
 
-			
+
 			// Disable sorting for columns
 			for (var i = 0; i < mainDataGrid.ColumnCount; i++)
 			{
 				mainDataGrid.Columns[i].SortMode = DataGridViewColumnSortMode.NotSortable;
 			}
 
-			
+
+			// if selected table is "_Приемы"
+			if (comboBox1.SelectedIndex == 4)
+			{
+				mainDataGrid.Columns[1].DefaultCellStyle.Format = "h:mm tt";
+			}
 		}
 
 		private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
