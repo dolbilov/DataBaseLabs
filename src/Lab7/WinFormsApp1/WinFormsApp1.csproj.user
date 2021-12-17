@@ -8,5 +8,14 @@
     <Compile Update="Forms\DoctorsForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\ParameterAskForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\QuerySelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\ShowResultForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

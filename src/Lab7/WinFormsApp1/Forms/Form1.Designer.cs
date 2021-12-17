@@ -41,6 +41,7 @@ namespace WinFormsApp1.Forms
 			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.mainDataGrid = new System.Windows.Forms.DataGridView();
 			this.comboBox1 = new System.Windows.Forms.ComboBox();
+			this.queryStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.mainDataGrid)).BeginInit();
 			this.SuspendLayout();
@@ -49,6 +50,7 @@ namespace WinFormsApp1.Forms
 			// 
 			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.actionsToolStripMenuItem,
+            this.queryStripMenuItem,
             this.aboutProgramToolStripMenuItem,
             this.exitToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -71,21 +73,21 @@ namespace WinFormsApp1.Forms
 			// addToolStripMenuItem
 			// 
 			this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-			this.addToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+			this.addToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.addToolStripMenuItem.Text = "Добавить";
 			this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
 			// 
 			// updateToolStripMenuItem
 			// 
 			this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-			this.updateToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+			this.updateToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.updateToolStripMenuItem.Text = "Изменить";
 			this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
 			// 
 			// deleteToolStripMenuItem
 			// 
 			this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-			this.deleteToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+			this.deleteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.deleteToolStripMenuItem.Text = "Удалить";
 			this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
 			// 
@@ -145,6 +147,13 @@ namespace WinFormsApp1.Forms
 			this.comboBox1.TabIndex = 3;
 			this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
 			// 
+			// queryStripMenuItem
+			// 
+			this.queryStripMenuItem.Name = "queryStripMenuItem";
+			this.queryStripMenuItem.Size = new System.Drawing.Size(60, 20);
+			this.queryStripMenuItem.Text = "Отчеты";
+			this.queryStripMenuItem.Click += new System.EventHandler(this.queryStripMenuItem_Click);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -175,5 +184,6 @@ namespace WinFormsApp1.Forms
 		private ToolStripMenuItem exitToolStripMenuItem;
 		public ComboBox comboBox1;
 		public DataGridView mainDataGrid;
+		private ToolStripMenuItem queryStripMenuItem;
 	}
 }

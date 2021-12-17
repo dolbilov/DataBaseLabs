@@ -17,11 +17,19 @@ namespace WinFormsApp1.Forms
 
 		private static bool _isChoose = false;
 
+		private static Form1 _instance = null;
+
 		public static TableOpenMode CurrentTableOpenMode = TableOpenMode.Add;
 
 		public Form1()
 		{
+			_instance = this;
 			InitializeComponent();
+		}
+
+		public static Form1 GetInstance()
+		{
+			return _instance;
 		}
 
 		private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -177,7 +185,7 @@ namespace WinFormsApp1.Forms
 			}
 		}
 
-		private void UpdateTable()
+		public void UpdateTable()
 		{
 			var dataSet = DBManager.GetDataSet(comboBox1.SelectedIndex);
 
@@ -238,6 +246,12 @@ namespace WinFormsApp1.Forms
 			}
 
 			UpdateTable();
+		}
+
+		private void queryStripMenuItem_Click(object sender, EventArgs e)
+		{
+			var form = new QuerySelectForm();
+			form.ShowDialog();
 		}
 	}
 }

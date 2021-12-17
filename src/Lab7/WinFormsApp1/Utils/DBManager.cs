@@ -6,11 +6,11 @@ namespace WinFormsApp1.Utils
 {
 	class DBManager
 	{
-		private const string provider =
+		private const string Provider =
 			@"Provider=Microsoft.ACE.OLEDB.12.0;" +
 			@"Data Source=""..\..\..\..\src\bd.accdb""";
 
-		public static OleDbConnection connection = new(provider);
+		public static OleDbConnection connection = new(Provider);
 
 		public static string IndexToTableName(int index)
 		{
