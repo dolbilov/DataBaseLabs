@@ -4,11 +4,14 @@ using System.Data.OleDb;
 
 namespace WinFormsApp1.Utils
 {
-	class DBManager
+	public static class DBManager
 	{
 		private const string Provider =
 			@"Provider=Microsoft.ACE.OLEDB.12.0;" +
-			@"Data Source=""..\..\..\..\src\bd.accdb""";
+			@"Data Source=""..\..\..\..\src\bd.accdb"";" +
+			@"Persist Security Info = False;" +
+			@"Jet OLEDB:Create System Database=true;" +
+			@"Jet OLEDB:System database=C:\Users\dolbi\AppData\Roaming\Microsoft\Access\System.mdw";
 
 		public static OleDbConnection connection = new(Provider);
 

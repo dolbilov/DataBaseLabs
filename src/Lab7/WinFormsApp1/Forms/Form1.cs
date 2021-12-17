@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Data.OleDb;
 using System.Text;
 using System.Windows.Forms;
@@ -202,6 +203,7 @@ namespace WinFormsApp1.Forms
 		{
 			var cells = mainDataGrid.SelectedRows[0].Cells;
 
+
 			switch (comboBox1.SelectedIndex)
 			{
 				// Врачи
@@ -226,6 +228,19 @@ namespace WinFormsApp1.Forms
 
 				// Диагнозы
 				case 1:
+					var form1 = new DiagnosisForm(cells);
+					if (CurrentTableOpenMode == TableOpenMode.Edit)
+					{
+						form1.mainLabel.Text = "Изменить значения";
+						form1.button1.Text = "Сохранить изменения";
+
+						//insert values into textboxes
+						form1.textBox1.Text = cells[0].Value.ToString();
+						form1.textBox2.Text = cells[1].Value.ToString();
+						form1.textBox3.Text = cells[2].Value.ToString();
+					}
+
+					form1.ShowDialog(this);
 					break;
 
 				// Лечебные учреждения
@@ -252,6 +267,28 @@ namespace WinFormsApp1.Forms
 		{
 			var form = new QuerySelectForm();
 			form.ShowDialog();
+		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			const string query = "SELECT * FROM MSysObjects";
+			try
+			{
+				DBManager.connection.Open();
+				var adapter = new OleDbDataAdapter(query, connection);
+				DataSet dataSet = new();
+				adapter.Fill(dataSet);
+				var form = new ShowResultForm(dataSet);
+				form.ShowDialog();
+			}
+			catch (Exception exception)
+			{
+				MessageBox.Show(exception.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+			finally
+			{
+				DBManager.connection.Close();
+			}
 		}
 	}
 }

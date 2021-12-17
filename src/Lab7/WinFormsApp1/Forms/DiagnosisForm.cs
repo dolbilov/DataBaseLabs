@@ -6,27 +6,26 @@ using WinFormsApp1.Utils.Enums;
 
 namespace WinFormsApp1.Forms
 {
-	public partial class DoctorsForm : Form
+	public partial class DiagnosisForm : Form
 	{
-		private const string TableName = "_Врачи";
+		private const string TableName = "_Диагнозы";
 		private static DataGridViewCellCollection _selectedRowCells;
-		
 
-		public DoctorsForm(DataGridViewCellCollection cells)
+		public DiagnosisForm(DataGridViewCellCollection cells)
 		{
 			_selectedRowCells = cells;
 			InitializeComponent();
 		}
-		
-		// Табельный номер врача
+
+		// идентификатор
 		private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
 		{
 			if (!InputValidator.ValidateInt(e))
 				e.Handled = true;
 		}
 
-		// Номер медицинского учреждения
-		private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+		// лечение
+		private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
 		{
 			if (!InputValidator.ValidateInt(e))
 				e.Handled = true;
@@ -37,10 +36,7 @@ namespace WinFormsApp1.Forms
 			// check if all fields are filled
 			if (string.IsNullOrEmpty(textBox1.Text) ||
 			    string.IsNullOrEmpty(textBox2.Text) ||
-			    string.IsNullOrEmpty(textBox3.Text) ||
-			    string.IsNullOrEmpty(textBox4.Text) ||
-			    string.IsNullOrEmpty(textBox5.Text) ||
-			    string.IsNullOrEmpty(textBox6.Text))
+			    string.IsNullOrEmpty(textBox3.Text))
 			{
 				MessageBox.Show("Не все поля заполнены!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
@@ -53,28 +49,19 @@ namespace WinFormsApp1.Forms
 				{
 					query = $"INSERT INTO {TableName} VALUES (";
 					query += $"{textBox1.Text}, ";
-					query += $"{textBox2.Text}, ";
-					query += $"'{textBox3.Text}', ";
-					query += $"'{textBox4.Text}', ";
-					query += $"'{textBox5.Text}', ";
-					query += $"'{textBox6.Text}')";
+					query += $"'{textBox2.Text}', ";
+					query += $"{textBox3.Text})";
 				}
 				else // change data of selected row
 				{
 					query = $"UPDATE {TableName} ";
-					query += $"SET [Табельный номер врача] = {textBox1.Text}, ";
-					query += $"[Номер лечебного учреждения] = {textBox2.Text}, ";
-					query += $"[Фамилия] = '{textBox3.Text}', ";
-					query += $"[Имя] = '{textBox4.Text}', ";
-					query += $"[Отчество] = '{textBox5.Text}', ";
-					query += $"[Специальность] = '{textBox6.Text}'\n";
+					query += $"SET [Идентификатор] = {textBox1.Text}, ";
+					query += $"[Описание диагноза] = '{textBox2.Text}', ";
+					query += $"[Лечение] = {textBox3.Text}\n";
 
-					query += $"WHERE [Табельный номер врача] = {_selectedRowCells[0].Value} AND ";
-					query += $"[Номер лечебного учреждения] = {_selectedRowCells[1].Value} AND ";
-					query += $"[Фамилия] = '{_selectedRowCells[2].Value}' AND ";
-					query += $"[Имя] = '{_selectedRowCells[3].Value}' AND ";
-					query += $"[Отчество] = '{_selectedRowCells[4].Value}' AND ";
-					query += $"[Специальность] = '{_selectedRowCells[5].Value}'";
+					query += $"WHERE [Идентификатор] = {_selectedRowCells[0].Value} AND ";
+					query += $"[Описание диагноза] = '{_selectedRowCells[1].Value}' AND ";
+					query += $"[Лечение] = {_selectedRowCells[2].Value}";
 				}
 
 				DBManager.connection.Open();
