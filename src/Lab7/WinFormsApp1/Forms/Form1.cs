@@ -72,6 +72,13 @@ namespace WinFormsApp1.Forms
 
 			var dataSet = DBManager.GetDataSet(index);
 
+			if (dataSet == null)
+			{
+				MessageBox.Show("Проблемы с чтением данных из файла БД :(", "Ошибка!", MessageBoxButtons.OK,
+					MessageBoxIcon.Error);
+				return;
+			}
+
 			mainDataGrid.DataSource = dataSet.Tables[0];
 
 
@@ -287,6 +294,20 @@ namespace WinFormsApp1.Forms
 
 				// Процедуры
 				case 5:
+					var form5 = new ProceduresForm(cells);
+					if (CurrentTableOpenMode == TableOpenMode.Edit)
+					{
+						form5.mainLabel.Text = "Изменить значения";
+						form5.button1.Text = "Сохранить изменения";
+
+						//insert values into textboxes
+						form5.textBox1.Text = cells[0].Value.ToString();
+						form5.textBox2.Text = cells[1].Value.ToString();
+						form5.textBox3.Text = cells[2].Value.ToString();
+						form5.textBox4.Text = cells[3].Value.ToString();
+					}
+
+					form5.ShowDialog(this);
 					break;
 			}
 

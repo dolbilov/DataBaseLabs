@@ -42,3 +42,4 @@ D:\IT\Projects\DataBaseLabs\src\Lab7\WinFormsApp1\obj\x64\Debug\net5.0-windows\W
 D:\IT\Projects\DataBaseLabs\src\Lab7\WinFormsApp1\obj\x64\Debug\net5.0-windows\WinFormsApp1.Forms.DiagnosisForm.resources
 D:\IT\Projects\DataBaseLabs\src\Lab7\WinFormsApp1\obj\x64\Debug\net5.0-windows\WinFormsApp1.Forms.HospitalsForm.resources
 D:\IT\Projects\DataBaseLabs\src\Lab7\WinFormsApp1\obj\x64\Debug\net5.0-windows\WinFormsApp1.Forms.PatientsForm.resources
+D:\IT\Projects\DataBaseLabs\src\Lab7\WinFormsApp1\obj\x64\Debug\net5.0-windows\WinFormsApp1.Forms.ProceduresForm.resources
