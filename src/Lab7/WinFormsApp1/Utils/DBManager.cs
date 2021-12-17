@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.OleDb;
+using System.Windows.Forms;
 
 namespace WinFormsApp1.Utils
 {
@@ -35,15 +36,25 @@ namespace WinFormsApp1.Utils
 
 			var query = "SELECT * FROM " + tableName;
 
-			connection.Open();
-
-			var adapter = new OleDbDataAdapter(query, connection);
 			DataSet dataSet = new();
-			adapter.Fill(dataSet);
-			
-			connection.Close();
-
-			return dataSet;
+			try
+			{
+				connection.Open();
+				var adapter = new OleDbDataAdapter(query, connection);
+				adapter.Fill(dataSet);
+				connection.Close();
+				return dataSet;
+			}
+			catch (Exception e)
+			{
+				MessageBox.Show(e.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return null;
+			}
+			finally
+			{
+				connection.Close();
+				
+			}
 		}
 	}
 }

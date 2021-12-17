@@ -263,6 +263,22 @@ namespace WinFormsApp1.Forms
 
 				// Пациенты
 				case 3:
+					var form3 = new PatientsForm(cells);
+					if (CurrentTableOpenMode == TableOpenMode.Edit)
+					{
+						form3.mainLabel.Text = "Изменить значения";
+						form3.button1.Text = "Сохранить изменения";
+
+						//insert values into textboxes
+						form3.textBox1.Text = cells[0].Value.ToString();
+						form3.textBox2.Text = cells[1].Value.ToString();
+						form3.textBox3.Text = cells[2].Value.ToString();
+						form3.textBox4.Text = cells[3].Value.ToString();
+						form3.dateTimePicker1.Text = cells[4].Value.ToString();
+						form3.textBox5.Text = cells[5].Value.ToString();
+					}
+
+					form3.ShowDialog(this);
 					break;
 
 				// Приемы
