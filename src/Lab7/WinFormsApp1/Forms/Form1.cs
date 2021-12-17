@@ -290,6 +290,23 @@ namespace WinFormsApp1.Forms
 
 				// Приемы
 				case 4:
+					var form4 = new AppointmentsForm(cells);
+					if (Form1.CurrentTableOpenMode == TableOpenMode.Edit)
+					{
+						form4.mainLabel.Text = "Изменить значения";
+						form4.button1.Text = "Сохранить изменения";
+
+						//insert values into textboxes
+						form4.dateTimePicker1.Text = cells[0].Value.ToString();
+						form4.dateTimePicker2.Text = cells[1].Value.ToString();
+						form4.textBox1.Text = cells[2].Value.ToString();
+						form4.textBox2.Text = cells[3].Value.ToString();
+						form4.textBox3.Text = cells[4].Value.ToString();
+						form4.textBox4.Text = cells[5].Value.ToString();
+						form4.textBox5.Text = cells[6].Value.ToString();
+					}
+
+					form4.ShowDialog(this);
 					break;
 
 				// Процедуры
