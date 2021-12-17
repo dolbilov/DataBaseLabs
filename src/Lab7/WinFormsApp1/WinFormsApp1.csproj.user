@@ -11,6 +11,9 @@
     <Compile Update="Forms\DoctorsForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\HospitalsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\ParameterAskForm.cs">
       <SubType>Form</SubType>
     </Compile>

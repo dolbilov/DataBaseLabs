@@ -245,6 +245,20 @@ namespace WinFormsApp1.Forms
 
 				// Лечебные учреждения
 				case 2:
+					var form2 = new HospitalsForm(cells);
+					if (CurrentTableOpenMode == TableOpenMode.Edit)
+					{
+						form2.mainLabel.Text = "Изменить значения";
+						form2.button1.Text = "Сохранить изменения";
+
+						//insert values into textboxes
+						form2.textBox1.Text = cells[0].Value.ToString();
+						form2.textBox2.Text = cells[1].Value.ToString();
+						form2.textBox3.Text = cells[2].Value.ToString();
+						form2.textBox4.Text = cells[3].Value.ToString();
+					}
+
+					form2.ShowDialog(this);
 					break;
 
 				// Пациенты
